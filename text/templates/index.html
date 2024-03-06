@@ -1,0 +1,279 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VitalVortex | Text Summarizer</title>
+    <link rel="shortcut icon" href="{% static "/text/logo.png" %}" type="image/x-icon">
+    <link rel="stylesheet" href="{% static "/text/styles.css" %}">
+    <link
+      href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Montserrat:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i"
+      rel="stylesheet">
+      <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.7.0/font/bootstrap-icons.min.css" rel="stylesheet">
+
+    <link rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+      integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
+      crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+
+    <!-- ====Header Section==== -->
+    <header>
+        <div class="header">  
+            <div class="left">
+                <div class="logo">
+                    <a href="{% url 'index' %}"><img src="{% static "/text/logo.png" %}" alt=""></a>
+                </div>
+            </div>
+            <div class="right">
+                <nav id="navbar" class="navbar">
+                    <ul>
+                      <li><a class="nav-link" href="#hero">Home</a></li>
+                      <li><a class="nav-link " href="#about">About</a></li>
+                      <li><a class="nav-link " href="{% url "services" %}">Services</a></li>
+                      <li><a class="nav-link " href="#team">Team</a></li>
+                      <li><a class="nav-link " href="#contact">Contact</a></li>
+                    </ul>
+                    <i class="bi bi-list mobile-nav-toggle"></i>
+                  </nav>
+            </div>
+        </div>
+    </header>
+
+    <!-- ====Hero Section==== -->
+    <section id="hero">
+        <div class="hero-container">
+            <div class="row">
+                <div class="getbutton">
+                    <button id="button">Get Started</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==== About us ==== -->
+    <section class="aboutus" id="about">
+        <div class="container">
+            <div class="section-title">
+            <h2>About Models</h2>
+            <p>Welcome to VitalVertex, where innovation meets intelligence in
+              the realm of Natural Language Processing (NLP). Our commitment to
+              harnessing the power of cutting-edge technologies has led us to
+              the forefront of the NLP landscape.</p>
+          </div>
+            <div class="row">
+                <div class="left">
+                    <div class="image">
+                    <img src="{% static "./text/about-us.png" %}" alt="About-Us">
+                    </div>
+                </div>
+                <div class="right">
+                        <h3>Our Flagship Models:</h3>
+                        <ul>
+                          <li class="bullet">
+                            
+                            <p class="fst-italic">
+                              T5 (Text-To-Text Transfer Transformer):<br>
+                              At the heart of our NLP endeavors is T5, a versatile
+                              transformer developed by Google. T5 redefines the way we
+                              approach NLP tasks, treating each challenge as a
+                              text-to-text problem. For text summarization, T5 emerges
+                              as a powerful tool, transforming the landscape of
+                              information condensation
+                            </p>
+                          </li>
+
+                          <li class="bullet">
+                            <p class="fst-italic">
+                              GPT-2 (Generative Pre-trained Transformer 2): <br>
+                              Discover the magic of language generation with GPT-2, an
+                              OpenAI creation. Trained on a vast corpus of internet
+                              text, GPT-2 empowers us to delve into the art of coherent
+                              and contextually rich language generation. From creative
+                              writing to text summarization, GPT-2 is a cornerstone of
+                              our quest for linguistic excellence.
+                            </p>
+                          </li>
+                          
+                          <li class="bullet">
+                           
+                            <p class="fst-italic">
+                              BART (Bidirectional and Auto-Regressive Transformers):
+                              <br>
+                              In our pursuit of excellence in summarization, we leverage
+                              the capabilities of BART, a Facebook creation. BART's
+                              unique denoising autoencoder architecture makes it a
+                              standout choice for our sequence-to-sequence tasks. The
+                              synergy of pre-training and fine-tuning ensures that our
+                              summarization endeavors are marked by clarity and
+                              precision.
+                            </p>
+                          </li>
+
+                          <li class="bullet">
+                            
+                            <p class="fst-italic">
+                              PEGASUS: <br>
+                              Step into the realm of abstractive summarization with
+                              Pegasus, a Google masterpiece. Tailored specifically for
+                              the art of summarization, Pegasus employs a groundbreaking
+                              pre-training approach,
+                              "pre-training with extractive summarization." It forms the
+                              backbone of our commitment to delivering succinct and
+                              impactful content.
+                            </p>
+                          </li>
+        
+                        </ul>
+                      </div>
+                </div>
+            </div>
+        
+    </section>
+
+    <!-- ====Team==== -->
+    <section class="team" id="team">
+      <div class="profile-card">
+        <div class="img">
+          <img src="{% static './text/Nirav.jpg' %}" alt="Profile Picture">
+        </div>
+        <div class="caption">
+          <h3>Nirav Jangale</h3>
+          <p>Web Developer</p>
+          <div class="social-links">
+            <a href="#"><i class="fa-brands fa-instagram"></i></a>
+            <a href="#"><i class="fa-solid fa-envelope"></i></a>
+            <a href="#"><i class="fa-brands fa-github"></i></a>
+          </div>
+        </div>
+      </div>
+      <div class="profile-card">
+          <div class="img">
+            <img src="{% static './text/Raj.jpg' %}" alt="Profile Picture">
+          </div>
+          <div class="caption">
+            <h3>Raj Dobariya</h3>
+            <p>Model Developer</p>
+            <div class="social-links">
+              <a href="#"><i class="fa-brands fa-instagram"></i></a>
+              <a href="#"><i class="fa-solid fa-envelope"></i></a>
+              <a href="#"><i class="fa-brands fa-github"></i></a>
+            </div>
+          </div>
+        </div>
+        <div class="profile-card">
+          <div class="img">
+            <img src="{% static './text/Vraj.jpg' %}" alt="Profile Picture">
+          </div>
+          <div class="caption">
+            <h3>Vraj Pujara</h3>
+            <p>Model Developer</p>
+            <div class="social-links">
+              <a href="#"><i class="fa-brands fa-instagram"></i></a>
+              <a href="#"><i class="fa-solid fa-envelope"></i></a>
+              <a href="#"><i class="fa-brands fa-github"></i></a>
+            </div>
+          </div>
+        </div>
+        <div class="profile-card">
+          <div class="img">
+            <img src="{% static './text/Safwan.jpg' %}" alt="Profile Picture">
+          </div>
+          <div class="caption">
+            <h3>Safwan Shaikh</h3>
+            <p>Model Developer</p>
+            <div class="social-links">
+              <a href="#"><i class="fa-brands fa-instagram"></i></a>
+              <a href="#"><i class="fa-solid fa-envelope"></i></a>
+              <a href="#"><i class="fa-brands fa-github"></i></a>
+            </div>
+          </div>
+        </div>
+    </section>
+
+    <!-- ====Contact==== -->
+    <section class="contact-us" id="contact">
+    <div class="contact" id="contact">
+    
+      <div class="section-header">
+        <div class="container">
+          <h2>Contact Us</h2>
+          <p> Free to contact us any time. We will get back to you as soon as we can!.</p>
+        </div>
+      </div>
+      
+      <div class="container">
+        <div class="row">
+          
+          <div class="contact-info">
+            <div class="contact-info-item">
+              <div class="contact-info-icon">
+                <i class="fas fa-home"></i>
+              </div>
+              
+              <div class="contact-info-content">
+                <h4>Address</h4>
+                <p>Ahemdabad,<br/> Gujarat, India, <br/>380026</p>
+              </div>
+            </div>
+            
+            <div class="contact-info-item">
+              <div class="contact-info-icon">
+                <i class="fas fa-phone"></i>
+              </div>
+              
+              <div class="contact-info-content">
+                <h4>Phone</h4>
+                <p>+919016760920</p>
+              </div>
+            </div>
+            
+            <div class="contact-info-item">
+              <div class="contact-info-icon">
+                <i class="fas fa-envelope"></i>
+              </div>
+              
+              <div class="contact-info-content">
+                <h4>Email</h4>
+               <p>itsniravjangale@gmail.com</p>
+              </div>
+            </div>
+          </div>
+          
+          <div class="contact-form">
+            <form action="" id="contact-form">
+              <h2>Send Message</h2>
+              <div class="input-box">
+                <input type="text" required="true" name="">
+                <span>Full Name</span>
+              </div>
+              
+              <div class="input-box">
+                <input type="email" required="true" name="">
+                <span>Email</span>
+              </div>
+              
+              <div class="input-box">
+                <textarea required="true" name=""></textarea>
+                <span>Type your Message...</span>
+              </div>
+              
+              <div class="input-box">
+                <input type="submit" value="Send" name="">
+              </div>
+            </form>
+          </div>
+          
+        </div>
+      </div>
+    </div>
+  </section>
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+    <script>
+      var servicesUrl = "{% url 'services' %}";
+    </script>
+    <script src="{% static "/text/main.js" %}"></script>
+</body>
+</html>
