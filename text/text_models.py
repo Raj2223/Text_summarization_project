@@ -4,12 +4,6 @@ from nltk.tokenize import sent_tokenize
 from nltk.translate.bleu_score import sentence_bleu
 from nltk.translate.bleu_score import SmoothingFunction
 
-from transformers import BartForConditionalGeneration, BartTokenizer, T5ForConditionalGeneration, T5Tokenizer, PegasusForConditionalGeneration, PegasusTokenizer
-from rouge_score import rouge_scorer
-from nltk.tokenize import sent_tokenize
-from nltk.translate.bleu_score import sentence_bleu
-from nltk.translate.bleu_score import SmoothingFunction
-
 def baseline_summarizer(document):
     # Tokenize text into sentences
     sentences = sent_tokenize(document)
